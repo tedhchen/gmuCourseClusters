@@ -1,6 +1,6 @@
 # Initialize
 rm(list = ls())
-wd <- '~/work/gmu_cig/'
+wd <- ''
 
 startup <- function(path){
   # Loading packages
@@ -9,8 +9,8 @@ startup <- function(path){
   
   # Loading data
   setwd(path)
-  dat <- read.csv('cig_student_data.csv')
-  courses <- read.csv('cig_courses.csv')
+  dat <- read.csv('data/cig_student_data.csv')
+  courses <- read.csv('data/cig_courses.csv')
   
   dat$course <- apply(dat[,c('SUBJ', 'NUMB')], 1, paste0, collapse = ' ')
   
