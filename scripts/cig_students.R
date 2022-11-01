@@ -72,7 +72,7 @@ startup <- function(path){
   
   commdetect <<- function(bpgraph, resolution_parameter = 1, alpha = 0.05, n_iterations = 2, seed = 1){
     set.seed(seed)
-    projCourse <- sdsm(bpg, alpha = 0.1)
+    projCourse <- sdsm(bpgraph, alpha = 0.1)
     cl <- cluster_leiden(projCourse, resolution_parameter = resolution_parameter, n_iterations = n_iterations)
     
     clusMembership <- membership(cl)
